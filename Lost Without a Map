@@ -1,0 +1,7 @@
+function maps(x){
+
+  let doubles = x.map(function(x) {
+    return x * 2;
+  });
+  return doubles;
+}
