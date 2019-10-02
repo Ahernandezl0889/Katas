@@ -1,0 +1,23 @@
+function getIssuer(number) {
+  
+  let num = number.toString().split("");
+  let AMEX = num.slice(0,2).join("");
+  let Discover = num.slice(0,4).join("");
+  let Mastercard = num.slice(0,2).join("");
+  let VISA = num[0];
+  
+  if(AMEX == "34" || AMEX == "37" && num.length == 15){
+    return "AMEX";
+  } else if (Discover == "6011" && num.length == 16) {
+    return "Discover";
+  } else if (Mastercard == "51" || Mastercard == "52" || Mastercard == "53" || Mastercard == "54" || Mastercard == "55" && num.length == 16) {
+    return "Mastercard";
+  } else if (VISA == 4 && (num.length == 13 || num.length == 16)){
+    return "VISA";
+  } else {
+    return "Unknown";
+  }
+  
+}
+
+getIssuer(5105105105105106);
