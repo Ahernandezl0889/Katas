@@ -1,0 +1,7 @@
+"use strict";
+
+function flattenAndSort(array) {
+let myNewArray = [].concat.apply([], array);
+myNewArray.sort(function(a, b){return a - b});
+  return myNewArray;
+}
