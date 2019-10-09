@@ -1,0 +1,13 @@
+var moveZeros = function (arr) {
+
+  
+  const zeros = arr.filter(zero=>zero===0)
+  const otherNum = arr.filter(num=>num !==0)
+  
+  console.log(zeros);
+  console.log(otherNum);
+  
+  // we combine
+  return [...otherNum, ...zeros]
+  
+}
